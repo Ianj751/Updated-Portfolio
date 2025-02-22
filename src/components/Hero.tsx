@@ -6,8 +6,8 @@ import ChangingFontText from "./ChangingFont";
 
 export default function Hero() {
   return (
-    <div className="relative isolate overflow-visible bg-black ">
-      <div className="mx-auto max-w-7xl px-6 py-20 lg:flex lg:items-center lg:gap-x-10 lg:px-8">
+    <div className="relative isolate overflow-hidden bg-black ">
+      <div className="mx-auto max-w-7xl px-6 py-50 lg:flex lg:items-center lg:gap-x-10 lg:px-8">
         <div className="mx-auto max-w-2xl lg:mx-0 lg:max-w-lg lg:flex-shrink-0">
           <motion.h1
             className="mt-10 text-4xl font-bold tracking-tight text-foreground sm:text-6xl"
@@ -20,7 +20,7 @@ export default function Hero() {
           </motion.h1>
           <motion.p
             // text-muted-foreground
-            className="mt-6 text-lg leading-8 text-slate-400 italic"
+            className="mt-6 text-2xl leading-8 text-slate-400 italic"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
@@ -60,10 +60,10 @@ export default function Hero() {
         >
           <div className="relative">
             <img
-              src="/IanJacksonFace.png"
+              src="/IanJacksonFace2.png"
               alt="My Face"
-              width={600}
-              height={600}
+              width={800}
+              height={800}
               className="w-[500px] rounded-2xl shadow-xl ring-1 ring-gray-900/10"
             />
           </div>

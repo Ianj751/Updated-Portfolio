@@ -7,10 +7,13 @@ import ProjectsPage from "./pages/ProjectsPage";
 import AboutPage from "./pages/AboutPage";
 import ContactPage from "./pages/ContactPage";
 
-function App() {
+import Navbar from "./components/Navbar";
+import { AnimatePresence } from "framer-motion";
+
+const Animated = () => {
   return (
     <>
-      <BrowserRouter>
+      <AnimatePresence>
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/home" element={<HomePage />} />
@@ -18,6 +21,17 @@ function App() {
           <Route path="/about" element={<AboutPage />} />
           <Route path="/contact" element={<ContactPage />} />
         </Routes>
+      </AnimatePresence>
+    </>
+  );
+};
+
+function App() {
+  return (
+    <>
+      <BrowserRouter>
+        <Navbar />
+        <Animated />
       </BrowserRouter>
     </>
   );

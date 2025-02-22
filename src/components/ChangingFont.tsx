@@ -24,7 +24,7 @@ export default function ChangingFontText() {
     <motion.h1
       animate={{ fontFamily: fonts[fontIndex] }}
       transition={{ duration: 0.5 }}
-      className="text-5xl text-left mt-10 text-gray-500"
+      className="text-8xl text-left mt-10 text-gray-500"
     >
       Ian Jackson
     </motion.h1>

@@ -30,7 +30,7 @@ const Navbar: React.FC = () => {
                 <Link
                   key={item}
                   to={`/${item.toLowerCase()}`}
-                  className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors duration-300 ease-in-out hover:bg-purple-500/10"
+                  className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors duration-300 ease-in-out hover:bg-slate-50/10"
                 >
                   {item}
                 </Link>

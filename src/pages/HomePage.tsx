@@ -1,11 +1,12 @@
 import Hero from "@/components/Hero";
-import Navbar from "@/components/Navbar";
+import PageTransition from "@/components/PageTransition";
 
 const HomePage: React.FC = () => {
   return (
     <>
-      <Navbar />
-      <Hero />
+      <PageTransition>
+        <Hero />
+      </PageTransition>
     </>
   );
 };

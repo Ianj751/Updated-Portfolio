@@ -17,7 +17,7 @@ export default function ProjectCard({
   tags,
 }: ProjectCardProps) {
   return (
-    <Card className="overflow-hidden bg-darken flex-1/2">
+    <Card className="!border-none overflow-hidden bg-surface-tonal-a10 flex-1/2  shadow-sm hover:shadow-xl raise">
       <div className="relative aspect-video">
         <img
           src={image || "/placeholder.svg"}
@@ -26,7 +26,7 @@ export default function ProjectCard({
         />
       </div>
       <CardContent className="p-4">
-        <h3 className="font-semibold text-xl mb-2">{title}</h3>
+        <h3 className="font-semibold text-xl mb-2 text-gray-300">{title}</h3>
         <p className="text-sm text-muted-foreground mb-4">{description}</p>
         <div className="flex flex-wrap gap-2">
           {tags.map((tag) => (
@@ -44,9 +44,9 @@ export default function ProjectCard({
           href={link}
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center gap-2 text-sm hover:underline"
+          className="inline-flex items-center gap-2 text-sm hover:underline text-gray-300"
         >
-          <Github className="h-4 w-4" />
+          <Github className="h-4 w-4 text-gray-300" />
           View on GitHub
         </a>
       </CardFooter>

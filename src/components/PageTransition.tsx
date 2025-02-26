@@ -4,37 +4,16 @@ type PageProps = {
   children: React.ReactNode;
 };
 
-type TVariants = {
-  initial: {
-    x: string;
-  };
-  animate: {
-    x: number;
-  };
-  exit: {
-    x: string;
-  };
-};
-
-// values for right to left transition
-const variants: TVariants = {
-  initial: {
-    x: "100vw",
-  },
-  animate: {
-    x: 0,
-  },
-  exit: {
-    x: "-100vw",
-  },
-};
-
 const PageTransition = ({ children }: PageProps) => {
   return (
     <motion.div
-      {...variants}
-      transition={{ duration: 0.5 }}
-      style={{ position: "static" }}
+      initial={{ scale: 0.5, opacity: 0 }}
+      animate={{ scale: 1, opacity: 1 }}
+      transition={{
+        type: "spring",
+        stiffness: 150,
+        damping: 30,
+      }}
     >
       {children}
     </motion.div>

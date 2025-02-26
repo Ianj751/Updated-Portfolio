@@ -11,15 +11,15 @@ const Navbar: React.FC = () => {
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
-
+  /* fixed w-full z-10 backdrop-blur-sm bg-black dark:bg-gray-900/80  */
   return (
-    <nav className="fixed w-full z-10 backdrop-blur-sm bg-black dark:bg-gray-900/80 ">
+    <nav className="mask-pattern fixed w-full z-10 bg-gray-600">
       <div className="max-w-6xl mx-auto px-4">
         <div className="flex justify-between items-center h-16">
           <div className="flex items-center">
             <a
               href="/"
-              className="text-2xl font-bold bg-gradient-to-r from-gray-50 to-gray-900 text-transparent bg-clip-text"
+              className="text-2xl font-bold  text-gray-50  bg-clip-text"
             >
               Ian Jackson
             </a>

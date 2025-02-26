@@ -6,7 +6,7 @@ import ChangingFontText from "./ChangingFont";
 
 export default function Hero() {
   return (
-    <div className="relative isolate overflow-hidden bg-black ">
+    <div className="relative isolate overflow-hidden">
       <div className="mx-auto max-w-7xl px-6 py-50 lg:flex lg:items-center lg:gap-x-10 lg:px-8">
         <div className="mx-auto max-w-2xl lg:mx-0 lg:max-w-lg lg:flex-shrink-0">
           <motion.h1
@@ -15,12 +15,11 @@ export default function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            {/* <span className="text-gradient text-gray-900">Ian Jackson</span> */}
             <ChangingFontText />
           </motion.h1>
           <motion.p
             // text-muted-foreground
-            className="mt-6 text-2xl leading-8 text-slate-400 italic"
+            className="mt-6 text-2xl leading-8 text-[#8c8e8b] italic"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
@@ -36,7 +35,7 @@ export default function Hero() {
           >
             <Button
               variant="secondary"
-              className="apple-button text-gray-500 bg-accent-foreground"
+              className="apple-button text-white bg-primary-a20"
             >
               <a href="/IanJackson_Resume.pdf" download="IanJackson_Resume.pdf">
                 Download My Resume
@@ -64,7 +63,7 @@ export default function Hero() {
               alt="My Face"
               width={800}
               height={800}
-              className="w-[500px] rounded-2xl shadow-xl ring-1 ring-gray-900/10"
+              className="w-[500px] rounded-2xl shadow-xl ring-3 ring-gray-900/10 backdrop-blur-sm "
             />
           </div>
         </motion.div>

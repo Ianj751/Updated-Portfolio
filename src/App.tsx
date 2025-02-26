@@ -28,12 +28,12 @@ const Animated = () => {
 
 function App() {
   return (
-    <>
+    <div className="bg-pattern ibm-plex-mono-bold">
       <BrowserRouter>
         <Navbar />
         <Animated />
       </BrowserRouter>
-    </>
+    </div>
   );
 }
 

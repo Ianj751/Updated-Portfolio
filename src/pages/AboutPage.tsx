@@ -19,11 +19,21 @@ function AboutPage() {
                 Hi there! I'm Ian Jackson, a passionate Computer Science student
                 with a keen interest in cloud computing. My journey in
                 technology began with a curiosity about how things work and
-                evolved into a love for coding and innovation. I've worked on
-                various projects, including an incoming internship at nCino. I'm
-                eager to explore the endless possibilities in cloud computing
-                and always open to new opportunities and discussions. Feel free
-                to reach out on LinkedIn or via email at ianj60184@gmail.com.
+                solving problems; this evolved into a love for coding and
+                innovation. I've worked on various personal and school projects,
+                including an incoming internship at nCino. I'm eager to explore
+                the endless possibilities in Computer Science and always open to
+                new opportunities and discussions. Feel free to reach out on
+                <a
+                  href="https://www.linkedin.com/in/ian-jackson-b67b39288/"
+                  target="_blank"
+                >
+                  {" LinkedIn "}
+                </a>
+                or via email at
+                <a href="mailto:ianj60184@gmail.com" target="_blank">
+                  {" ianj60184@gmail.com "}
+                </a>
               </p>
               <p className="">
                 When I'm not coding, you can find me exploring new technologies,
@@ -33,7 +43,7 @@ function AboutPage() {
             <div className="flex justify-center">
               <img
                 src="/IanJacksonFace2.png"
-                alt="John Doe"
+                alt="Ian Jackson"
                 width={400}
                 height={400}
                 className="rounded-full shadow-lg backdrop-blur-2xl"

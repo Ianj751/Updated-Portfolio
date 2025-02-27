@@ -9,6 +9,7 @@ import ContactPage from "./pages/ContactPage";
 
 import Navbar from "./components/Navbar";
 import { AnimatePresence } from "framer-motion";
+import ErrorPage from "./pages/ErrorPage";
 
 const Animated = () => {
   return (
@@ -20,6 +21,7 @@ const Animated = () => {
           <Route path="/projects" element={<ProjectsPage />} />
           <Route path="/about" element={<AboutPage />} />
           <Route path="/contact" element={<ContactPage />} />
+          <Route path="*" element={<ErrorPage />} />
         </Routes>
       </AnimatePresence>
     </>

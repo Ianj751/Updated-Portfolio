@@ -27,14 +27,6 @@ const SkillIcon = ({
 
 const skills = [
   {
-    icon: Code,
-    name: "Frontend Development",
-    tech: "React TS, HTML/CSS",
-    description:
-      "Building responsive and interactive user interfaces with modern React features with optimal performance.",
-    color: "text-blue-500",
-  },
-  {
     icon: Server,
     name: "Backend Development",
     tech: "Go, Python, Java, Spring Boot",
@@ -57,6 +49,14 @@ const skills = [
     description:
       "Designing and implementing efficient database schemas and queries for optimal data management.",
     color: "text-purple-500",
+  },
+  {
+    icon: Code,
+    name: "Frontend Development",
+    tech: "React TS, HTML/CSS",
+    description:
+      "Building responsive and interactive user interfaces with modern React features with optimal performance.",
+    color: "text-blue-500",
   },
   {
     icon: GitBranch,
@@ -105,7 +105,7 @@ export default function Skills() {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
             >
-              <div className="bg-green-950 p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group">
+              <div className="bg-surface-tonal-a10 p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group">
                 <div className="flex items-center mb-4">
                   <SkillIcon icon={skill.icon} color={skill.color} />
                   <div className="ml-4">

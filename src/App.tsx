@@ -1,4 +1,5 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { Analytics } from "@vercel/analytics/react";
 import "./App.css";
 
 import HomePage from "./pages/HomePage";
@@ -35,8 +36,10 @@ function App() {
         <Navbar />
         <Animated />
       </BrowserRouter>
+      <Analytics />
     </div>
   );
 }
 
 export default App;
+

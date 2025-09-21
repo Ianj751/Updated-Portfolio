@@ -1,4 +1,5 @@
 import Education from "@/components/Education";
+import ExperienceCard from "@/components/ExperienceCard";
 import Skills from "@/components/Skills";
 import { Mail, Github, Linkedin } from "lucide-react";
 
@@ -16,19 +17,22 @@ function AboutPage() {
             <div className="space-y-4">
               <h2 className="text-2xl mb-4">About Me</h2>
               <p className=" ">
-                Hi there! I'm Ian Jackson, a passionate Computer Science student
-                with a keen interest in cloud computing. My journey in
-                technology began with a curiosity about how things work and
-                solving problems; this evolved into a love for coding and
-                innovation. I've worked on various personal and school projects,
-                including an incoming internship at nCino. I'm eager to explore
-                the endless possibilities in Computer Science and always open to
-                new opportunities and discussions. Feel free to reach out on
+                Hey! I'm Ian Jackson, a passionate Computer Science student at
+                the University of North Texas with a passion for all things
+                Software Engineering. My journey in technology began with a
+                curiosity about how things work and solving problems; this
+                evolved into a love for coding and innovation. I've worked on
+                various personal and school projects primarily in the realm of
+                web and full-stack development. I'm eager to explore the endless
+                possibilities in Computer Science and always open to new
+                opportunities and discussions. Feel free to reach out on
                 <a
-                  href="https://www.linkedin.com/in/ian-jackson-b67b39288/"
+                  href="https://www.linkedin.com/in/jackson-ian"
                   target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Ian's LinkedIn profile (opens in new tab)"
                 >
-                  {" LinkedIn "}
+                  <span style={{ color: "#0a66c2" }}> LinkedIn </span>
                 </a>
                 or via email at
                 <a href="mailto:ianj60184@gmail.com" target="_blank">
@@ -42,7 +46,7 @@ function AboutPage() {
             </div>
             <div className="flex justify-center">
               <img
-                src="/IanJacksonFace2.png"
+                src="/IanJacksonFace.jpg"
                 alt="Ian Jackson"
                 width={400}
                 height={400}
@@ -50,7 +54,10 @@ function AboutPage() {
               />
             </div>
           </section>
-
+          <section className="mb-16">
+            <h2 className="text-2xl font-semibold mb-6 ">Experience</h2>
+            <ExperienceCard />
+          </section>
           <section className="mb-16">
             <h2 className="text-2xl font-semibold mb-6 ">Education</h2>
             <Education />
@@ -65,7 +72,7 @@ function AboutPage() {
             <div className="flex flex-wrap gap-4">
               <a
                 href="mailto:ianj60184@gmail.com"
-                className="flex items-center space-x-2 bg-[#2f944a]  px-4 py-2 rounded-md hover:bg-[#235c32] transition duration-300"
+                className="flex items-center space-x-2 bg-emerald-700  px-4 py-2 rounded-md hover:bg-emerald-800 transition duration-300"
               >
                 <Mail />
                 <span>Email Me</span>

@@ -6,7 +6,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { Mail, Phone, MapPin, Github, Linkedin } from "lucide-react";
+import { Mail, MapPin, Github, Linkedin } from "lucide-react";
 
 export default function ContactPage() {
   return (
@@ -34,10 +34,7 @@ export default function ContactPage() {
               <Mail className="h-5 w-5 text-white" />
               <p>ianj60184@gmail.com</p>
             </div>
-            <div className="flex items-center gap-3">
-              <Phone className="h-5 w-5 text-white" />
-              <p>+1 (214) 536-1960</p>
-            </div>
+
             <div className="flex items-center gap-3">
               <MapPin className="h-5 w-5 text-white" />
               <p>Dallas, Texas</p>
@@ -68,7 +65,7 @@ export default function ContactPage() {
             </div>
 
             <div className="pt-6">
-              <Button className="w-full bg-primary-a10" asChild>
+              <Button className="w-full bg-emerald-800" asChild>
                 <a href="mailto:ianj60184@gmail.com">Send Email</a>
               </Button>
             </div>

@@ -36,7 +36,7 @@ function App() {
         <Navbar />
         <Animated />
       </BrowserRouter>
-      <Analytics />
+      <Analytics mode="development" route={"/"} />
     </div>
   );
 }

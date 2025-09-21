@@ -1,0 +1,33 @@
+<svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#10B981;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#059669;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#047857;stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="textGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#FFFFFF;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#E5E7EB;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background circle -->
+  <circle cx="16" cy="16" r="15" fill="url(#bgGradient)" stroke="#064E3B" stroke-width="1"/>
+  
+  <!-- Initials -->
+  <text x="16" y="22" 
+        font-family="Inter, system-ui, sans-serif" 
+        font-size="14" 
+        font-weight="700" 
+        text-anchor="middle" 
+        fill="url(#textGradient)">
+    IJ
+  </text>
+  
+  <!-- Subtle code accent -->
+  <g opacity="0.7">
+    <path d="M8 12 L10 14 L8 16" stroke="white" stroke-width="1" fill="none" stroke-linecap="round"/>
+    <path d="M24 12 L22 14 L24 16" stroke="white" stroke-width="1" fill="none" stroke-linecap="round"/>
+  </g>
+</svg>

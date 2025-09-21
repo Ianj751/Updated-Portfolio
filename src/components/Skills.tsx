@@ -20,7 +20,7 @@ const SkillIcon = ({
   >;
   color: string;
 }) => (
-  <div className={`p-2 rounded-full bg-white dark:bg-gray-800 shadow-lg`}>
+  <div className="p-3 bg-white/10 rounded-xl backdrop-blur-md shadow-lg flex items-center justify-center">
     <Icon className={`w-6 h-6 ${color}`} />
   </div>
 );
@@ -29,7 +29,7 @@ const skills = [
   {
     icon: Server,
     name: "Backend Development",
-    tech: "Go, Python, Java, Spring Boot",
+    tech: "Go, Python, Java Spring Boot, C# ASP.NET",
     description:
       "Creating robust server-side applications with focus on scalability and clean architecture.",
     color: "text-green-500",
@@ -103,19 +103,35 @@ export default function Skills() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
+              transition={{ duration: 0.5, delay: index * 0.08 }}
+              className="transition-all duration-700"
             >
-              <div className="bg-surface-tonal-a10 p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group">
-                <div className="flex items-center mb-4">
-                  <SkillIcon icon={skill.icon} color={skill.color} />
-                  <div className="ml-4">
-                    <h3 className="text-lg text-white font-semibold  group-hover:text-blue-400 transition-colors duration-300">
-                      {skill.name}
-                    </h3>
-                    <p className="text-sm text-gray-400">{skill.tech}</p>
+              <div className="bg-gradient-to-br from-green-900 via-emerald-800 to-slate-900 rounded-3xl shadow-2xl border border-green-900/30 overflow-hidden hover:shadow-emerald-900/40 transition-all duration-300">
+                <div className="p-6 bg-gradient-to-r from-green-900 via-emerald-800 to-slate-900 text-white">
+                  <div className="flex items-center mb-4">
+                    <SkillIcon icon={skill.icon} color={skill.color} />
+                    <div className="ml-4">
+                      <h3 className="text-xl text-emerald-100 font-extrabold tracking-tight">
+                        {skill.name}
+                      </h3>
+                      <p className="text-sm text-emerald-200">{skill.tech}</p>
+                    </div>
                   </div>
                 </div>
-                <p className="text-gray-300 text-sm">{skill.description}</p>
+
+                <div className="p-6 bg-gradient-to-br from-slate-900 via-emerald-950 to-green-900">
+                  <p className="text-emerald-100 text-sm leading-relaxed mb-4">
+                    {skill.description}
+                  </p>
+                  <div className="flex flex-wrap gap-3">
+                    <span className="px-3 py-1 bg-emerald-900/50 text-emerald-200 rounded-full text-sm font-medium border border-emerald-700 shadow-sm">
+                      {skill.name.split(" ")[0]}
+                    </span>
+                    <span className="px-3 py-1 bg-emerald-900/30 text-emerald-200 rounded-full text-sm font-medium border border-emerald-800 shadow-sm">
+                      {skill.tech.split(",")[0]}
+                    </span>
+                  </div>
+                </div>
               </div>
             </motion.div>
           ))}

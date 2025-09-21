@@ -29,30 +29,46 @@ export default function Education() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
-              className="bg-surface-tonal-a10 p-8 rounded-xl shadow-lg transition-all duration-300 hover:shadow-2xl relative overflow-hidden"
+              className="transition-all duration-700"
             >
-              <div className="absolute top-0 left-0 w-32 h-32 bg-surface-tonal-a0 rounded-br-full z-0 opacity-50"></div>
-              <div className="relative z-10">
-                <h3 className="text-2xl font-semibold mb-2 text-white flex items-center">
-                  <GraduationCap className="w-6 h-6 mr-2" />
-                  {edu.degree}
-                </h3>
-                <p className="text-xl text-gray-300 mb-4">{edu.institution}</p>
-                <p className="text-gray-300 mb-4 flex items-center">
-                  <Calendar className="w-4 h-4 mr-2" />
-                  {edu.period}
-                </p>
-                <h4 className="text-lg font-medium mb-2 text-gray-200 flex items-center">
-                  <LibraryBig className="w-5 h-5 mr-2" />
-                  Relevant Coursework:
-                </h4>
-                <ul className="list-disc list-inside space-y-2">
-                  {edu.coursework.map((coursework, idx) => (
-                    <li key={idx} className="text-gray-300">
-                      {coursework}
-                    </li>
-                  ))}
-                </ul>
+              <div className="bg-gradient-to-br from-green-900 via-emerald-800 to-slate-900 rounded-3xl shadow-2xl border border-green-900/30 overflow-hidden hover:shadow-emerald-900/40 transition-all duration-300">
+                <div className="bg-gradient-to-r from-green-900 via-emerald-800 to-slate-900 p-8 text-white">
+                  <div className="flex items-center gap-4 mb-4">
+                    <div className="p-3 bg-white/10 rounded-xl backdrop-blur-md shadow-lg">
+                      <GraduationCap className="w-7 h-7 text-emerald-300" />
+                    </div>
+                    <div>
+                      <h3 className="text-3xl font-extrabold tracking-tight">
+                        {edu.degree}
+                      </h3>
+                      <p className="text-emerald-200 text-lg font-medium">
+                        {edu.institution}
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="flex flex-wrap gap-6 text-emerald-100 text-base">
+                    <div className="flex items-center gap-2">
+                      <Calendar className="w-5 h-5 text-emerald-300" />
+                      <span>{edu.period}</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="p-8 bg-gradient-to-br from-slate-900 via-emerald-950 to-green-900">
+                  <h4 className="text-emerald-300 font-semibold mb-4 text-xl flex items-center">
+                    <LibraryBig className="w-5 h-5 mr-2" />
+                    Relevant Coursework
+                  </h4>
+
+                  <ul className="list-disc list-inside space-y-2">
+                    {edu.coursework.map((coursework, idx) => (
+                      <li key={idx} className="text-emerald-100">
+                        {coursework}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
               </div>
             </motion.div>
           ))}

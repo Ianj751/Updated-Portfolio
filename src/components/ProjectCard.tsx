@@ -26,39 +26,48 @@ export default function ProjectCard({
       viewport={{ once: true }}
       transition={{ duration: 0.5, delay: index * 0.1 }}
     >
-      <Card className="!border-none overflow-hidden bg-surface-tonal-a10 flex-1/2  shadow-sm hover:shadow-xl raise">
-        <div className="relative aspect-video">
-          <img
-            src={image || "/placeholder.svg"}
-            alt={title}
-            className="w-full h-full object-cover transition-transform hover:scale-105"
-          />
-        </div>
-        <CardContent className="p-4">
-          <h3 className="font-semibold text-xl mb-2 text-gray-300">{title}</h3>
-          <p className="text-sm text-muted-foreground mb-4">{description}</p>
-          <div className="flex flex-wrap gap-2">
-            {tags.map((tag) => (
-              <span
-                key={tag}
-                className="inline-flex items-center rounded-md bg-muted px-2 py-1 text-xs font-medium ring-1 ring-inset ring-gray-500/10"
-              >
-                {tag}
-              </span>
-            ))}
+      <Card className="!bg-transparent !border-none !shadow-none overflow-visible p-0 flex-1/2">
+        <div className="bg-gradient-to-br from-green-900 via-emerald-800 to-slate-900 rounded-3xl shadow-2xl border border-green-900/30 overflow-hidden hover:shadow-emerald-900/40 transition-all duration-300">
+          <div className="relative aspect-video overflow-hidden">
+            <img
+              src={image || "/placeholder.svg"}
+              alt={title}
+              className="w-full h-full object-cover transition-transform hover:scale-105"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
           </div>
-        </CardContent>
-        <CardFooter className="p-4 pt-0">
-          <a
-            href={link}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 text-sm hover:underline text-gray-300"
-          >
-            <Github className="h-4 w-4 text-gray-300" />
-            View on GitHub
-          </a>
-        </CardFooter>
+
+          <CardContent className="p-6 bg-gradient-to-r from-green-900 via-emerald-800 to-slate-900 text-white">
+            <h3 className="font-extrabold text-2xl mb-1 tracking-tight">
+              {title}
+            </h3>
+            <p className="text-sm text-emerald-200 mb-4 leading-relaxed">
+              {description}
+            </p>
+            <div className="flex flex-wrap gap-3">
+              {tags.map((tag) => (
+                <span
+                  key={tag}
+                  className="px-3 py-1 bg-emerald-900/60 text-emerald-200 rounded-full text-xs font-medium border border-emerald-700 shadow-sm"
+                >
+                  {tag}
+                </span>
+              ))}
+            </div>
+          </CardContent>
+
+          <CardFooter className="p-4 pt-0 bg-gradient-to-br from-slate-900 via-emerald-950 to-green-900">
+            <a
+              href={link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 text-sm hover:underline text-emerald-200"
+            >
+              <Github className="h-4 w-4 text-emerald-200" />
+              View on GitHub
+            </a>
+          </CardFooter>
+        </div>
       </Card>
     </motion.div>
   );

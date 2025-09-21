@@ -35,7 +35,7 @@ export default function Hero() {
           >
             <Button
               variant="secondary"
-              className="apple-button text-white bg-primary-a20"
+              className="apple-button text-white bg-emerald-800"
             >
               <a href="/IanJackson_Resume.pdf" download="IanJackson_Resume.pdf">
                 Download My Resume
@@ -59,7 +59,7 @@ export default function Hero() {
         >
           <div className="relative">
             <img
-              src="/IanJacksonFace2.png"
+              src="/IanJacksonFace.jpg"
               alt="My Face"
               width={800}
               height={800}

@@ -23,7 +23,7 @@ const ExperienceCard = () => {
     location: "Wilmington, NC",
     period: "May 2025 - Dec 2025",
     description:
-      "Building scalable web applications and leading development teams to create solutions that serve over 100,000 users daily.",
+      "Driving full-stack development and cloud-native API design with Agile practices, CI/CD automation, and scalable cloud infrastructure.",
     skills: ["Angular", "TypeScript", "AWS", "Salesforce"],
   };
 
